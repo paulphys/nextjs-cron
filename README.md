@@ -46,7 +46,7 @@ jobs:
           echo test, and deploy your project.
 ```
 ## Scheduled tasks
-With the schedule option in the workflow `.github/workflows/scheduled.yaml` you can execute tasks at specified intervals. For instance, this example executes a HTTP request with curl every 60 minutes.
+With [Scheduled events](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events), as in the workflow `.github/workflows/scheduled.yaml` you can execute tasks at specified intervals. For instance, this example executes a HTTP request with curl every 60 minutes.
 
 ```yaml
 name: hourly-cron-job
