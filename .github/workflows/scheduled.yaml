@@ -1,0 +1,13 @@
+name: hourly-cron-job
+on:
+  schedule:
+    - cron: '*/60 * * * *'
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hourly-cron-job
+        run: |
+          curl --request POST \
+          --url 'https://example.com/api/example' \
+          --header 'Authorization: Bearer ${{ secrets.ACTION_KEY }}'
