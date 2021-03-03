@@ -8,7 +8,7 @@ Although there are many pre-existing services that provide scheduled cron jobs, 
 ## Get started
 All Github Actions reside in the directory `.github/workflows/` of your repository and are written in [YAML](https://yaml.org/).
 
-For example, `.github/workflows/starter.yaml` is the most basic workflow to help you get started with Actions.
+ `.github/workflows/starter.yaml` is the most basic workflow to help you get started with Actions.
 ```yaml
 name: Cron job
 
@@ -63,7 +63,7 @@ jobs:
           --url 'https://example.com/api/task' \
           --header 'Authorization: Bearer ${{ secrets.ACTION_KEY }}'
 ```
-If you are having trouble writting cron schedule expressions, take a look at [crontab guru](https://crontab.guru/).
+If you are having trouble writing cron schedule expressions, take a look at [crontab guru](https://crontab.guru/).
 
 ## Next.js API routes
 
@@ -71,10 +71,11 @@ If you are having trouble writting cron schedule expressions, take a look at [cr
 
 Any file inside the folder `pages/api` is mapped to `/api/*` and will be treated as an API endpoint instead of a `page`. They are server-side only bundles and won't increase your client-side bundle size.
 
+### Authorization flow
 To securely trigger API routes and Serverless functions with Github Actions, you need to provide some sort of Authorization key in the header of your API call, which, when executed, gets compared to a corresponding key in your Next.js application.
 
 You can achieve this by adding [Encrypted Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to your Github repository and passing them in the header of your HTTP request, like shown in the previous section.
-In addition to adding the key to your Github repository, you also need to access it within your Next.js application, preferably through [Environment Variables](https://nextjs.org/docs/basic-features/environment-variables).
+Along with adding the key to your Github repository, you also need to access it within your Next.js application, preferably through [Environment Variables](https://nextjs.org/docs/basic-features/environment-variables).
 
 The example in `pages/api/example.js` implements this authorization flow.
 
