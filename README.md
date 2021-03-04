@@ -8,7 +8,9 @@ Although there are many pre-existing services that provide scheduled cron jobs, 
 ## Get started
 All Github Actions reside in the directory `.github/workflows/` of your repository and are written in [YAML](https://yaml.org/).
 
- `.github/workflows/starter.yaml` is the most basic workflow to help you get started with Actions. If you only wish to learn about how to schedule tasks, you can proceed to the next section.
+ `.github/workflows/starter.yaml` is the most basic workflow to help you get started with Actions.
+ 
+ If you only wish to learn about how to schedule tasks, you can proceed to the next section.
 ```yaml
 name: Starter workflow
 
@@ -68,7 +70,10 @@ If you are having trouble writing cron schedule expressions, take a look at [cro
 ## Next.js API routes
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) and [Serverless functions](https://vercel.com/docs/serverless-functions/introduction) provide a straightforward solution to building your API with Next.js on Vercel.
-Any file inside the folder `pages/api` is mapped to `/api/*` and will be treated as an API endpoint instead of a `page`. If you are using serverless functions, regardless of the [Runtime](https://vercel.com/docs/runtimes), you would need to put the files into the `/api/` directory at your project's root.
+Any file inside the folder `pages/api` is mapped to `/api/*` and will be treated as an API endpoint instead of a `page`.
+
+If you are using serverless functions, regardless of the [Runtime](https://vercel.com/docs/runtimes), you would need to put the files into the `/api/` directory at your project's root.
+
 ### Authorization flow
 To securely trigger API routes and Serverless functions with Github Actions, you need to provide some sort of Authorization key in the header of your API call, which, when executed, gets compared to a corresponding key in your Next.js application.
 
