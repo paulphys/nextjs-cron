@@ -10,43 +10,6 @@ All Github Actions reside in the directory `.github/workflows/` of your reposito
 
  `.github/workflows/starter.yaml` is the most basic workflow to help you get started with Actions.
  
- If you only wish to learn about how to schedule tasks, you can proceed to the next section.
-```yaml
-name: Starter workflow
-
-# Controls when the action will run. 
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-```
 ## Scheduled tasks
 With [Scheduled events](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events) you can execute tasks at specified intervals. For instance, the provided workflow `.github/workflows/scheduled.yaml` executes a HTTP request with curl every 60 minutes.
 
@@ -123,6 +86,3 @@ export default function handler(req:NextApiRequest, res:NextApiResponse) {
   }
 }
 ```
-
-## Real-world applications
-If you are aware of any open source Next.js projects that already utilize Github Actions to trigger scheduled API routes, please consider adding them to this subsection by creating a pull request.
