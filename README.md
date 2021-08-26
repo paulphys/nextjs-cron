@@ -8,7 +8,7 @@ Although there are many pre-existing services that provide scheduled cron jobs, 
 ## Get started
 All Github Actions reside in the directory `.github/workflows/` of your repository and are written in [YAML](https://yaml.org/).
 
- `.github/workflows/starter.yaml` is the most basic workflow to help you get started with Actions.
+ [`.github/workflows/starter.yaml`](https://github.com/baulml/nextjs-cron/blob/master/.github/workflows/starter.yaml) is the most basic workflow to help you get started with Actions.
  
 ## Scheduled tasks
 With [Scheduled events](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events) you can execute tasks at specified intervals. For instance, the provided workflow `.github/workflows/scheduled.yaml` executes a HTTP request with curl every 60 minutes.
