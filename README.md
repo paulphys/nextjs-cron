@@ -40,7 +40,7 @@ If you are using serverless functions, regardless of the [Runtime](https://verce
 ### Authorization flow
 To securely trigger API routes and serverless functions with Github Actions, you need to provide an authorization key in the header of your API call, which, when executed, gets compared to a corresponding key in your Next.js application.
 
-You can achieve this by adding [Encrypted Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to your Github repository and passing them in the header of your HTTP request, like shown in the previous code snippet.
+You can achieve this by adding [Encrypted Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) to your Github repository and passing them with the header of your HTTP request, like shown in the previous code snippet.
 Along with adding the key to your Github repository, you also need to access it within your Next.js application, preferably through [Environment Variables](https://nextjs.org/docs/basic-features/environment-variables).
 
 The example `pages/api/example.js` implements this authorization flow.
