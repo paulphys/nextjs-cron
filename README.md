@@ -1,3 +1,7 @@
+> **Note**
+
+As of [February 22nd 2023](https://vercel.com/blog/cron-jobs) Vercel is officially offering built-in cron jobs to trigger your serverless and edge functions. Read the [documentation](https://vercel.com/docs/cron-jobs) to learn more. Keep in mind the feature is only free during its beta phase, it'll be a paid feature for general availability, which means that the GitHub Actions route will remain relevant for a completly free option.
+
 # Next.js Cron
 Cron jobs with [Github Actions](https://github.com/features/actions) for Next.js applications on Vercel▲
 
